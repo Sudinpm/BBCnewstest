@@ -1,8 +1,8 @@
 steps:
 - task: InvokeRESTAPI@1
   inputs:
+        method: 'GET'
+    url: 'https://newsapi.org/v2/everything?sources=bbc-news&apiKey=0b05944e6d83427985c44aaf2c865aee'
+    headers: '{"Content-Type": "application/json"}'
     connectionType: 'connectedServiceName'
     serviceConnection: '<your-service-connection-name>'
-    method: 'GET'
-    url: 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0b05944e6d83427985c44aaf2c865aee'
-    headers: '{"Content-Type": "application/json"}'
