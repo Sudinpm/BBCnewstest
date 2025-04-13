@@ -1,0 +1,14 @@
+steps:
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    method: 'GET'
+    headers: '{"Content-Type": "application/json"}'
+    waitForCompletion: 'false'
+steps:
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceNameARM'
+    method: 'GET'
+    headers: '{"Content-Type": "application/json"}'
+    waitForCompletion: 'false'
