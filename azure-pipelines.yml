@@ -1,0 +1,9 @@
+steps:
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    serviceConnection: '<service-connection-name>'
+    method: 'GET'
+    urlSuffix: '/v2/everything'
+    headers: '{"Content-Type": "application/json"}'
+    body: '{"key": "0b05944e6d83427985c44aaf2c865aee"}'
