@@ -5,7 +5,7 @@ jobs:
   steps:
   - task: InvokeRESTAPI@1
     inputs:
-      connectionType: 'Sudinpm'
+      connectionType: 'github.com_Sudinpm'
       method: 'GET'
       headers: '{"Content-Type": "application/json"}'
       waitForCompletion: 'false'
