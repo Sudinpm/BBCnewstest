@@ -1,11 +1,10 @@
 jobs:
 - job: InvokeAPIJob
-  displayName: 'Invoke REST API Job'
+  displayName: 'Sudin API run'
   pool: server # Use the server pool for agentless tasks
   steps:
   - task: InvokeRESTAPI@1
     inputs:
-      connectionType: 'none'
       method: 'GET'
       url: 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0b05944e6d83427985c44aaf2c865aee'
       headers: '{"Content-Type": "application/json"}'
