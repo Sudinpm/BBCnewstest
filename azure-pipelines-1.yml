@@ -1,14 +1,11 @@
-steps:
-- task: InvokeRESTAPI@1
-  inputs:
-    connectionType: 'connectedServiceName'
-    method: 'GET'
-    headers: '{"Content-Type": "application/json"}'
-    waitForCompletion: 'false'
-steps:
-- task: InvokeRESTAPI@1
-  inputs:
-    connectionType: 'connectedServiceNameARM'
-    method: 'GET'
-    headers: '{"Content-Type": "application/json"}'
-    waitForCompletion: 'false'
+jobs:
+- job: InvokeAPIJob
+  displayName: 'Sudins API Job'
+  pool: server # Use the server pool for agentless tasks
+  steps:
+  - task: InvokeRESTAPI@1
+    inputs:
+      connectionType: 'Sudinpm'
+      method: 'GET'
+      headers: '{"Content-Type": "application/json"}'
+      waitForCompletion: 'false'
