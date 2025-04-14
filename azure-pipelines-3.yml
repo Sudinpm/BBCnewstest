@@ -1,0 +1,10 @@
+steps:
+- script: |
+    echo "Fetching data from NewsAPI..."
+    curl "https://newsapi.org/v2/everything?q=keyword&apiKey=0b05944e6d83427985c44aaf2c865aee" -o newsapi_response.json
+    echo "Data fetched successfully and saved to newsapi_response.json."
+  displayName: "Fetch NewsAPI Data"
+- script: |
+    echo "Processing fetched data..."
+    # Add your custom parsing or processing logic here
+  displayName: "Process API Response"
